@@ -1,0 +1,222 @@
+$GreenColor: rgb(8, 185, 37);
+$MainFont: arial, helvetica, sans-serif;
+
+body {
+    margin: 10px;
+
+    p {
+        margin: 0;
+        text-align: center;
+        font-family: $MainFont;
+    }
+
+    .Widget {
+        width: 230px;
+        height: 400px;
+
+        &__Header {
+            width: 100%;
+            height: 10%;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &Text {
+                font-size: 30px;
+                font-family: $MainFont;
+                font-weight: 700;
+                color: white;
+            }
+        }
+
+        &__Content {
+            display: flex;
+            position: relative;
+            height: 300px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        &__Footer {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__Button_Blue {
+            height: 50px;
+            width: 200px;
+            background-color: blue;
+            border-radius: 10px;
+            border: 0;
+            box-shadow: 0 7px 10px -10px gray;
+            font-size: 100%;
+            font-weight: 700;
+            color: white;
+            transition: ease-in-out 100ms;
+            outline: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: darkblue;
+                box-shadow: 0 7px 10px -9px black;
+            }
+
+            &:active {
+                box-shadow: 0 4px 10px -5px black;
+                height: 49px;
+                width: 196px;
+                font-size: 98%;
+            }
+        }
+
+        &__Control {
+            top: 50%;
+            transform: translateY(-50%);
+            height: 40px;
+            width: 40px;
+            border: 0;
+            border-radius: 100%;
+            box-shadow: 0 0 10px gray;
+            background-size: cover;
+            outline: none;
+            transition: opacity ease-in-out 200ms;
+            position: absolute;
+
+            &_Right {
+                right: 10px;
+                background-image: url('../public/image/right.png');
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+
+                &:disabled {
+                    opacity: 0.1;
+                    cursor: default;
+                }
+            }
+
+            &_Left {
+                left: 10px;
+                background-image: url('../public/image/left.png');
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+
+                &:disabled {
+                    opacity: 0.1;
+                    cursor: default;
+                }
+            }
+        }
+
+        &__List {
+            padding: 0 10px;
+            width: 150px;
+
+            &Header {
+                margin: 5px;
+            }
+        }
+
+        &__Slide {
+            display: flex;
+            width: 100%;
+            height: 80%;
+            border-radius: 5%;
+            overflow: hidden;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0 2px 10px gray;
+            cursor: pointer;
+
+            &:hover > &__Description {
+                background-color: rgb(240, 240, 240);
+            }
+        }
+
+        &__Image {
+            width: 100%;
+            height: 300px;
+            background-image: none;
+            background-size: cover;
+            box-sizing: border-box;
+        }
+
+        &__Price {
+            margin: 7px;
+            display: flex;
+            width: 40%;
+            background-color: $GreenColor;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            padding: 2px;
+            box-shadow: 0 1px 1px rgb(209, 253, 217);
+
+            &Text {
+                color: white;
+                font-size: 12px;
+                font-weight: 700;
+                font-family: $MainFont;
+            }
+        }
+
+        &__Description {
+            display: flex;
+            flex-direction: column;
+            width: 86%;
+            height: 50%;
+            padding: 7%;
+            transition: ease-in 100ms;
+
+            &Text {
+                font-family: $MainFont;
+                text-align: left;
+            }
+
+            &Text2 {
+                font-family: $MainFont;
+                text-align: left;
+                color: gray;
+            }
+        }
+
+        &__Check {
+            display: flex;
+            width: 60%;
+            height: 15px;
+            background-color: rgb(209, 253, 217);
+            align-items: center;
+            border-radius: 10px;
+            padding: 5px;
+            justify-content: space-between;
+
+            img {
+                height: 15px;
+                width: 15px;
+            }
+
+            &Text {
+                padding-right: 3px;
+                text-align: left;
+                font-family: $MainFont;
+                font-size: 10px;
+                font-weight: 700;
+                color: $GreenColor;
+            }
+        }
+
+        &__Slider {
+            display: flex;
+            position: relative;
+            transition: right ease-in-out 600ms;
+        }
+    }
+}
